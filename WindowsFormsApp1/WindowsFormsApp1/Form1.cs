@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     {
         List<double> member;
         double valu;
+        string string_member;
         string lable;
         public Form1()
         {
@@ -24,6 +25,7 @@ namespace WindowsFormsApp1
             member = new List<double>();
             valu = new double();
             lable = "";
+            label2.Text = string_member = "";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -68,7 +70,10 @@ namespace WindowsFormsApp1
 
         private void CleanAll_Click(object sender, EventArgs e)
         {
-
+            string_member = "";
+            lable = "";
+            label1.Text = "0";
+            label2.Text="";
         }
 
         private void PlusForMin_Click(object sender, EventArgs e)

@@ -62,6 +62,7 @@
             this.Plus = new System.Windows.Forms.Button();
             this.Zap = new System.Windows.Forms.Button();
             this.B0 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(225, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(265, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,9 +98,9 @@
             // 
             // MC
             // 
-            this.MC.Location = new System.Drawing.Point(12, 88);
+            this.MC.Location = new System.Drawing.Point(9, 88);
             this.MC.Name = "MC";
-            this.MC.Size = new System.Drawing.Size(36, 29);
+            this.MC.Size = new System.Drawing.Size(44, 29);
             this.MC.TabIndex = 1;
             this.MC.Text = "MC";
             this.MC.UseVisualStyleBackColor = true;
@@ -107,9 +108,9 @@
             // 
             // MR
             // 
-            this.MR.Location = new System.Drawing.Point(54, 88);
+            this.MR.Location = new System.Drawing.Point(59, 88);
             this.MR.Name = "MR";
-            this.MR.Size = new System.Drawing.Size(36, 29);
+            this.MR.Size = new System.Drawing.Size(44, 29);
             this.MR.TabIndex = 3;
             this.MR.Text = "MR";
             this.MR.UseVisualStyleBackColor = true;
@@ -117,9 +118,9 @@
             // 
             // MS
             // 
-            this.MS.Location = new System.Drawing.Point(96, 88);
+            this.MS.Location = new System.Drawing.Point(109, 88);
             this.MS.Name = "MS";
-            this.MS.Size = new System.Drawing.Size(36, 29);
+            this.MS.Size = new System.Drawing.Size(44, 29);
             this.MS.TabIndex = 4;
             this.MS.Text = "MS";
             this.MS.UseVisualStyleBackColor = true;
@@ -127,9 +128,9 @@
             // 
             // MPlus
             // 
-            this.MPlus.Location = new System.Drawing.Point(138, 88);
+            this.MPlus.Location = new System.Drawing.Point(159, 88);
             this.MPlus.Name = "MPlus";
-            this.MPlus.Size = new System.Drawing.Size(36, 29);
+            this.MPlus.Size = new System.Drawing.Size(44, 29);
             this.MPlus.TabIndex = 5;
             this.MPlus.Text = "M+";
             this.MPlus.UseVisualStyleBackColor = true;
@@ -137,9 +138,9 @@
             // 
             // MMin
             // 
-            this.MMin.Location = new System.Drawing.Point(182, 88);
+            this.MMin.Location = new System.Drawing.Point(209, 88);
             this.MMin.Name = "MMin";
-            this.MMin.Size = new System.Drawing.Size(36, 29);
+            this.MMin.Size = new System.Drawing.Size(44, 29);
             this.MMin.TabIndex = 6;
             this.MMin.Text = "M-";
             this.MMin.UseVisualStyleBackColor = true;
@@ -148,18 +149,18 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 35);
+            this.label1.Location = new System.Drawing.Point(12, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 43);
+            this.label1.Size = new System.Drawing.Size(241, 30);
             this.label1.TabIndex = 7;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // Sqrt
             // 
-            this.Sqrt.Location = new System.Drawing.Point(182, 123);
+            this.Sqrt.Location = new System.Drawing.Point(209, 122);
             this.Sqrt.Name = "Sqrt";
-            this.Sqrt.Size = new System.Drawing.Size(36, 29);
+            this.Sqrt.Size = new System.Drawing.Size(44, 29);
             this.Sqrt.TabIndex = 12;
             this.Sqrt.Text = " √";
             this.Sqrt.UseVisualStyleBackColor = true;
@@ -167,9 +168,9 @@
             // 
             // PlusForMin
             // 
-            this.PlusForMin.Location = new System.Drawing.Point(138, 123);
+            this.PlusForMin.Location = new System.Drawing.Point(159, 123);
             this.PlusForMin.Name = "PlusForMin";
-            this.PlusForMin.Size = new System.Drawing.Size(36, 29);
+            this.PlusForMin.Size = new System.Drawing.Size(44, 29);
             this.PlusForMin.TabIndex = 11;
             this.PlusForMin.Text = "±";
             this.PlusForMin.UseVisualStyleBackColor = true;
@@ -177,9 +178,9 @@
             // 
             // CleanAll
             // 
-            this.CleanAll.Location = new System.Drawing.Point(96, 123);
+            this.CleanAll.Location = new System.Drawing.Point(109, 123);
             this.CleanAll.Name = "CleanAll";
-            this.CleanAll.Size = new System.Drawing.Size(36, 29);
+            this.CleanAll.Size = new System.Drawing.Size(44, 29);
             this.CleanAll.TabIndex = 10;
             this.CleanAll.Text = "C";
             this.CleanAll.UseVisualStyleBackColor = true;
@@ -187,9 +188,9 @@
             // 
             // CleanElement
             // 
-            this.CleanElement.Location = new System.Drawing.Point(54, 123);
+            this.CleanElement.Location = new System.Drawing.Point(59, 122);
             this.CleanElement.Name = "CleanElement";
-            this.CleanElement.Size = new System.Drawing.Size(36, 29);
+            this.CleanElement.Size = new System.Drawing.Size(44, 29);
             this.CleanElement.TabIndex = 9;
             this.CleanElement.Text = "CE";
             this.CleanElement.UseVisualStyleBackColor = true;
@@ -197,9 +198,9 @@
             // 
             // Backspase
             // 
-            this.Backspase.Location = new System.Drawing.Point(12, 123);
+            this.Backspase.Location = new System.Drawing.Point(9, 123);
             this.Backspase.Name = "Backspase";
-            this.Backspase.Size = new System.Drawing.Size(36, 29);
+            this.Backspase.Size = new System.Drawing.Size(44, 29);
             this.Backspase.TabIndex = 8;
             this.Backspase.Text = "←";
             this.Backspase.UseVisualStyleBackColor = true;
@@ -208,9 +209,9 @@
             // Proz
             // 
             this.Proz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Proz.Location = new System.Drawing.Point(182, 158);
+            this.Proz.Location = new System.Drawing.Point(209, 157);
             this.Proz.Name = "Proz";
-            this.Proz.Size = new System.Drawing.Size(36, 29);
+            this.Proz.Size = new System.Drawing.Size(44, 29);
             this.Proz.TabIndex = 17;
             this.Proz.Text = "%";
             this.Proz.UseVisualStyleBackColor = true;
@@ -218,9 +219,9 @@
             // 
             // Dell
             // 
-            this.Dell.Location = new System.Drawing.Point(138, 158);
+            this.Dell.Location = new System.Drawing.Point(159, 157);
             this.Dell.Name = "Dell";
-            this.Dell.Size = new System.Drawing.Size(36, 29);
+            this.Dell.Size = new System.Drawing.Size(44, 29);
             this.Dell.TabIndex = 16;
             this.Dell.Text = "/";
             this.Dell.UseVisualStyleBackColor = true;
@@ -229,9 +230,9 @@
             // B9
             // 
             this.B9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B9.Location = new System.Drawing.Point(96, 158);
+            this.B9.Location = new System.Drawing.Point(109, 157);
             this.B9.Name = "B9";
-            this.B9.Size = new System.Drawing.Size(36, 29);
+            this.B9.Size = new System.Drawing.Size(44, 29);
             this.B9.TabIndex = 15;
             this.B9.Text = "9";
             this.B9.UseVisualStyleBackColor = true;
@@ -240,9 +241,9 @@
             // B8
             // 
             this.B8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B8.Location = new System.Drawing.Point(54, 158);
+            this.B8.Location = new System.Drawing.Point(59, 157);
             this.B8.Name = "B8";
-            this.B8.Size = new System.Drawing.Size(36, 29);
+            this.B8.Size = new System.Drawing.Size(44, 29);
             this.B8.TabIndex = 14;
             this.B8.Text = "8";
             this.B8.UseVisualStyleBackColor = true;
@@ -251,9 +252,9 @@
             // B7
             // 
             this.B7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B7.Location = new System.Drawing.Point(12, 158);
+            this.B7.Location = new System.Drawing.Point(9, 157);
             this.B7.Name = "B7";
-            this.B7.Size = new System.Drawing.Size(36, 29);
+            this.B7.Size = new System.Drawing.Size(44, 29);
             this.B7.TabIndex = 13;
             this.B7.Text = "7";
             this.B7.UseVisualStyleBackColor = true;
@@ -261,9 +262,9 @@
             // 
             // OneDellX
             // 
-            this.OneDellX.Location = new System.Drawing.Point(182, 193);
+            this.OneDellX.Location = new System.Drawing.Point(209, 192);
             this.OneDellX.Name = "OneDellX";
-            this.OneDellX.Size = new System.Drawing.Size(36, 29);
+            this.OneDellX.Size = new System.Drawing.Size(44, 29);
             this.OneDellX.TabIndex = 22;
             this.OneDellX.Text = "1/x";
             this.OneDellX.UseVisualStyleBackColor = true;
@@ -272,9 +273,9 @@
             // Ymnoj
             // 
             this.Ymnoj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Ymnoj.Location = new System.Drawing.Point(138, 193);
+            this.Ymnoj.Location = new System.Drawing.Point(159, 193);
             this.Ymnoj.Name = "Ymnoj";
-            this.Ymnoj.Size = new System.Drawing.Size(36, 29);
+            this.Ymnoj.Size = new System.Drawing.Size(44, 29);
             this.Ymnoj.TabIndex = 21;
             this.Ymnoj.Text = "*";
             this.Ymnoj.UseVisualStyleBackColor = true;
@@ -283,9 +284,9 @@
             // B6
             // 
             this.B6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B6.Location = new System.Drawing.Point(96, 193);
+            this.B6.Location = new System.Drawing.Point(109, 194);
             this.B6.Name = "B6";
-            this.B6.Size = new System.Drawing.Size(36, 29);
+            this.B6.Size = new System.Drawing.Size(44, 29);
             this.B6.TabIndex = 20;
             this.B6.Text = "6";
             this.B6.UseVisualStyleBackColor = true;
@@ -294,9 +295,9 @@
             // B5
             // 
             this.B5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B5.Location = new System.Drawing.Point(54, 193);
+            this.B5.Location = new System.Drawing.Point(59, 194);
             this.B5.Name = "B5";
-            this.B5.Size = new System.Drawing.Size(36, 29);
+            this.B5.Size = new System.Drawing.Size(44, 29);
             this.B5.TabIndex = 19;
             this.B5.Text = "5";
             this.B5.UseVisualStyleBackColor = true;
@@ -305,9 +306,9 @@
             // B4
             // 
             this.B4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B4.Location = new System.Drawing.Point(12, 193);
+            this.B4.Location = new System.Drawing.Point(9, 194);
             this.B4.Name = "B4";
-            this.B4.Size = new System.Drawing.Size(36, 29);
+            this.B4.Size = new System.Drawing.Size(44, 29);
             this.B4.TabIndex = 18;
             this.B4.Text = "4";
             this.B4.UseVisualStyleBackColor = true;
@@ -316,9 +317,9 @@
             // Min
             // 
             this.Min.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Min.Location = new System.Drawing.Point(138, 228);
+            this.Min.Location = new System.Drawing.Point(159, 228);
             this.Min.Name = "Min";
-            this.Min.Size = new System.Drawing.Size(36, 29);
+            this.Min.Size = new System.Drawing.Size(44, 29);
             this.Min.TabIndex = 26;
             this.Min.Text = "-";
             this.Min.UseVisualStyleBackColor = true;
@@ -327,9 +328,9 @@
             // B3
             // 
             this.B3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B3.Location = new System.Drawing.Point(96, 228);
+            this.B3.Location = new System.Drawing.Point(109, 228);
             this.B3.Name = "B3";
-            this.B3.Size = new System.Drawing.Size(36, 29);
+            this.B3.Size = new System.Drawing.Size(44, 29);
             this.B3.TabIndex = 25;
             this.B3.Text = "3";
             this.B3.UseVisualStyleBackColor = true;
@@ -338,9 +339,9 @@
             // B2
             // 
             this.B2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B2.Location = new System.Drawing.Point(53, 228);
+            this.B2.Location = new System.Drawing.Point(59, 228);
             this.B2.Name = "B2";
-            this.B2.Size = new System.Drawing.Size(36, 29);
+            this.B2.Size = new System.Drawing.Size(44, 29);
             this.B2.TabIndex = 24;
             this.B2.Text = "2";
             this.B2.UseVisualStyleBackColor = true;
@@ -349,9 +350,9 @@
             // B1
             // 
             this.B1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.B1.Location = new System.Drawing.Point(12, 228);
+            this.B1.Location = new System.Drawing.Point(9, 228);
             this.B1.Name = "B1";
-            this.B1.Size = new System.Drawing.Size(36, 29);
+            this.B1.Size = new System.Drawing.Size(44, 29);
             this.B1.TabIndex = 23;
             this.B1.Text = "1";
             this.B1.UseVisualStyleBackColor = true;
@@ -360,9 +361,9 @@
             // RESULT
             // 
             this.RESULT.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RESULT.Location = new System.Drawing.Point(182, 228);
+            this.RESULT.Location = new System.Drawing.Point(209, 227);
             this.RESULT.Name = "RESULT";
-            this.RESULT.Size = new System.Drawing.Size(36, 64);
+            this.RESULT.Size = new System.Drawing.Size(44, 64);
             this.RESULT.TabIndex = 32;
             this.RESULT.Text = "=";
             this.RESULT.UseVisualStyleBackColor = true;
@@ -371,9 +372,9 @@
             // Plus
             // 
             this.Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Plus.Location = new System.Drawing.Point(138, 263);
+            this.Plus.Location = new System.Drawing.Point(159, 262);
             this.Plus.Name = "Plus";
-            this.Plus.Size = new System.Drawing.Size(36, 29);
+            this.Plus.Size = new System.Drawing.Size(44, 29);
             this.Plus.TabIndex = 31;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = true;
@@ -382,9 +383,9 @@
             // Zap
             // 
             this.Zap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Zap.Location = new System.Drawing.Point(96, 263);
+            this.Zap.Location = new System.Drawing.Point(109, 262);
             this.Zap.Name = "Zap";
-            this.Zap.Size = new System.Drawing.Size(36, 29);
+            this.Zap.Size = new System.Drawing.Size(44, 29);
             this.Zap.TabIndex = 30;
             this.Zap.Text = ",";
             this.Zap.UseVisualStyleBackColor = true;
@@ -392,19 +393,29 @@
             // 
             // B0
             // 
-            this.B0.Location = new System.Drawing.Point(12, 263);
+            this.B0.Location = new System.Drawing.Point(9, 262);
             this.B0.Name = "B0";
-            this.B0.Size = new System.Drawing.Size(78, 29);
+            this.B0.Size = new System.Drawing.Size(94, 29);
             this.B0.TabIndex = 28;
             this.B0.Text = "0";
             this.B0.UseVisualStyleBackColor = true;
             this.B0.Click += new System.EventHandler(this.B0_Click);
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(9, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(244, 23);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(225, 305);
+            this.ClientSize = new System.Drawing.Size(265, 305);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.RESULT);
             this.Controls.Add(this.Plus);
             this.Controls.Add(this.Zap);
@@ -482,6 +493,7 @@
         private System.Windows.Forms.Button Plus;
         private System.Windows.Forms.Button Zap;
         private System.Windows.Forms.Button B0;
+        private System.Windows.Forms.Label label2;
     }
 }
 
