@@ -32,8 +32,6 @@
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.MC = new System.Windows.Forms.Button();
             this.MR = new System.Windows.Forms.Button();
@@ -72,9 +70,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.видToolStripMenuItem,
             this.правкаToolStripMenuItem,
-            this.справкаToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2});
+            this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(225, 24);
@@ -99,16 +95,6 @@
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(12, 20);
-            // 
             // MC
             // 
             this.MC.Location = new System.Drawing.Point(12, 88);
@@ -117,6 +103,7 @@
             this.MC.TabIndex = 1;
             this.MC.Text = "MC";
             this.MC.UseVisualStyleBackColor = true;
+            this.MC.Click += new System.EventHandler(this.MC_Click);
             // 
             // MR
             // 
@@ -126,6 +113,7 @@
             this.MR.TabIndex = 3;
             this.MR.Text = "MR";
             this.MR.UseVisualStyleBackColor = true;
+            this.MR.Click += new System.EventHandler(this.MR_Click);
             // 
             // MS
             // 
@@ -135,6 +123,7 @@
             this.MS.TabIndex = 4;
             this.MS.Text = "MS";
             this.MS.UseVisualStyleBackColor = true;
+            this.MS.Click += new System.EventHandler(this.MS_Click);
             // 
             // MPlus
             // 
@@ -144,6 +133,7 @@
             this.MPlus.TabIndex = 5;
             this.MPlus.Text = "M+";
             this.MPlus.UseVisualStyleBackColor = true;
+            this.MPlus.Click += new System.EventHandler(this.MPlus_Click);
             // 
             // MMin
             // 
@@ -153,6 +143,7 @@
             this.MMin.TabIndex = 6;
             this.MMin.Text = "M-";
             this.MMin.UseVisualStyleBackColor = true;
+            this.MMin.Click += new System.EventHandler(this.MMin_Click);
             // 
             // label1
             // 
@@ -172,6 +163,7 @@
             this.Sqrt.TabIndex = 12;
             this.Sqrt.Text = " √";
             this.Sqrt.UseVisualStyleBackColor = true;
+            this.Sqrt.Click += new System.EventHandler(this.Sqrt_Click);
             // 
             // PlusForMin
             // 
@@ -181,6 +173,7 @@
             this.PlusForMin.TabIndex = 11;
             this.PlusForMin.Text = "±";
             this.PlusForMin.UseVisualStyleBackColor = true;
+            this.PlusForMin.Click += new System.EventHandler(this.PlusForMin_Click);
             // 
             // CleanAll
             // 
@@ -190,6 +183,7 @@
             this.CleanAll.TabIndex = 10;
             this.CleanAll.Text = "C";
             this.CleanAll.UseVisualStyleBackColor = true;
+            this.CleanAll.Click += new System.EventHandler(this.CleanAll_Click);
             // 
             // CleanElement
             // 
@@ -199,6 +193,7 @@
             this.CleanElement.TabIndex = 9;
             this.CleanElement.Text = "CE";
             this.CleanElement.UseVisualStyleBackColor = true;
+            this.CleanElement.Click += new System.EventHandler(this.CleanElement_Click);
             // 
             // Backspase
             // 
@@ -208,6 +203,7 @@
             this.Backspase.TabIndex = 8;
             this.Backspase.Text = "←";
             this.Backspase.UseVisualStyleBackColor = true;
+            this.Backspase.Click += new System.EventHandler(this.Backspase_Click);
             // 
             // Proz
             // 
@@ -218,6 +214,7 @@
             this.Proz.TabIndex = 17;
             this.Proz.Text = "%";
             this.Proz.UseVisualStyleBackColor = true;
+            this.Proz.Click += new System.EventHandler(this.Proz_Click);
             // 
             // Dell
             // 
@@ -227,6 +224,7 @@
             this.Dell.TabIndex = 16;
             this.Dell.Text = "/";
             this.Dell.UseVisualStyleBackColor = true;
+            this.Dell.Click += new System.EventHandler(this.Dell_Click);
             // 
             // B9
             // 
@@ -237,6 +235,7 @@
             this.B9.TabIndex = 15;
             this.B9.Text = "9";
             this.B9.UseVisualStyleBackColor = true;
+            this.B9.Click += new System.EventHandler(this.B9_Click);
             // 
             // B8
             // 
@@ -247,6 +246,7 @@
             this.B8.TabIndex = 14;
             this.B8.Text = "8";
             this.B8.UseVisualStyleBackColor = true;
+            this.B8.Click += new System.EventHandler(this.B8_Click);
             // 
             // B7
             // 
@@ -257,6 +257,7 @@
             this.B7.TabIndex = 13;
             this.B7.Text = "7";
             this.B7.UseVisualStyleBackColor = true;
+            this.B7.Click += new System.EventHandler(this.B7_Click);
             // 
             // OneDellX
             // 
@@ -266,6 +267,7 @@
             this.OneDellX.TabIndex = 22;
             this.OneDellX.Text = "1/x";
             this.OneDellX.UseVisualStyleBackColor = true;
+            this.OneDellX.Click += new System.EventHandler(this.OneDellX_Click);
             // 
             // Ymnoj
             // 
@@ -276,6 +278,7 @@
             this.Ymnoj.TabIndex = 21;
             this.Ymnoj.Text = "*";
             this.Ymnoj.UseVisualStyleBackColor = true;
+            this.Ymnoj.Click += new System.EventHandler(this.Ymnoj_Click);
             // 
             // B6
             // 
@@ -286,6 +289,7 @@
             this.B6.TabIndex = 20;
             this.B6.Text = "6";
             this.B6.UseVisualStyleBackColor = true;
+            this.B6.Click += new System.EventHandler(this.B6_Click);
             // 
             // B5
             // 
@@ -296,6 +300,7 @@
             this.B5.TabIndex = 19;
             this.B5.Text = "5";
             this.B5.UseVisualStyleBackColor = true;
+            this.B5.Click += new System.EventHandler(this.B5_Click);
             // 
             // B4
             // 
@@ -306,6 +311,7 @@
             this.B4.TabIndex = 18;
             this.B4.Text = "4";
             this.B4.UseVisualStyleBackColor = true;
+            this.B4.Click += new System.EventHandler(this.B4_Click);
             // 
             // Min
             // 
@@ -316,6 +322,7 @@
             this.Min.TabIndex = 26;
             this.Min.Text = "-";
             this.Min.UseVisualStyleBackColor = true;
+            this.Min.Click += new System.EventHandler(this.Min_Click);
             // 
             // B3
             // 
@@ -326,6 +333,7 @@
             this.B3.TabIndex = 25;
             this.B3.Text = "3";
             this.B3.UseVisualStyleBackColor = true;
+            this.B3.Click += new System.EventHandler(this.B3_Click);
             // 
             // B2
             // 
@@ -336,6 +344,7 @@
             this.B2.TabIndex = 24;
             this.B2.Text = "2";
             this.B2.UseVisualStyleBackColor = true;
+            this.B2.Click += new System.EventHandler(this.B2_Click);
             // 
             // B1
             // 
@@ -346,6 +355,7 @@
             this.B1.TabIndex = 23;
             this.B1.Text = "1";
             this.B1.UseVisualStyleBackColor = true;
+            this.B1.Click += new System.EventHandler(this.B1_Click);
             // 
             // RESULT
             // 
@@ -356,6 +366,7 @@
             this.RESULT.TabIndex = 32;
             this.RESULT.Text = "=";
             this.RESULT.UseVisualStyleBackColor = true;
+            this.RESULT.Click += new System.EventHandler(this.RESULT_Click);
             // 
             // Plus
             // 
@@ -366,6 +377,7 @@
             this.Plus.TabIndex = 31;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = true;
+            this.Plus.Click += new System.EventHandler(this.Plus_Click);
             // 
             // Zap
             // 
@@ -376,6 +388,7 @@
             this.Zap.TabIndex = 30;
             this.Zap.Text = ",";
             this.Zap.UseVisualStyleBackColor = true;
+            this.Zap.Click += new System.EventHandler(this.Zap_Click);
             // 
             // B0
             // 
@@ -385,6 +398,7 @@
             this.B0.TabIndex = 28;
             this.B0.Text = "0";
             this.B0.UseVisualStyleBackColor = true;
+            this.B0.Click += new System.EventHandler(this.B0_Click);
             // 
             // Form1
             // 
@@ -423,7 +437,7 @@
             this.Controls.Add(this.label1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Калькулятор";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -438,8 +452,6 @@
         private System.Windows.Forms.ToolStripMenuItem видToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem правкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button MC;
         private System.Windows.Forms.Button MR;
