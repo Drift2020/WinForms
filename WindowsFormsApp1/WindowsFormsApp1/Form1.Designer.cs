@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,12 +99,14 @@
             // 
             // MC
             // 
+            this.MC.BackColor = System.Drawing.Color.Transparent;
+            this.MC.ForeColor = System.Drawing.Color.Black;
             this.MC.Location = new System.Drawing.Point(9, 88);
             this.MC.Name = "MC";
             this.MC.Size = new System.Drawing.Size(44, 29);
             this.MC.TabIndex = 1;
             this.MC.Text = "MC";
-            this.MC.UseVisualStyleBackColor = true;
+            this.MC.UseVisualStyleBackColor = false;
             this.MC.Click += new System.EventHandler(this.MC_Click);
             // 
             // MR
@@ -278,6 +281,7 @@
             this.Ymnoj.Size = new System.Drawing.Size(44, 29);
             this.Ymnoj.TabIndex = 21;
             this.Ymnoj.Text = "*";
+            this.Ymnoj.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Ymnoj.UseVisualStyleBackColor = true;
             this.Ymnoj.Click += new System.EventHandler(this.Ymnoj_Click);
             // 
@@ -409,6 +413,7 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
@@ -446,6 +451,7 @@
             this.Controls.Add(this.MC);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Калькулятор";

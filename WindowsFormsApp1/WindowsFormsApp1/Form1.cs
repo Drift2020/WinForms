@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +13,16 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        List<double> member;
-        double valu;
-        string string_member;
-        string lable;
+
+        Calc calc=new Calc();
         public Form1()
         {
             InitializeComponent();
 
 
             label1.Text = "0";
-            member = new List<double>();
-            valu = new double();
+        
+         
             lable = "";
             label2.Text = string_member = "";
         }
@@ -50,7 +49,7 @@ namespace WindowsFormsApp1
 
         private void MPlus_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void MMin_Click(object sender, EventArgs e)
@@ -65,7 +64,8 @@ namespace WindowsFormsApp1
 
         private void CleanElement_Click(object sender, EventArgs e)
         {
-
+            lable = "";
+            label1.Text = "0";
         }
 
         private void CleanAll_Click(object sender, EventArgs e)
@@ -178,7 +178,9 @@ namespace WindowsFormsApp1
 
         private void Plus_Click(object sender, EventArgs e)
         {
-
+            string_member += lable + "+";
+            label2.Text = string_member;
+           
         }
 
         private void Zap_Click(object sender, EventArgs e)
@@ -186,6 +188,9 @@ namespace WindowsFormsApp1
 
         }
 
-      
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
