@@ -8,8 +8,8 @@ namespace WindowsFormsApp1
 {
     class Calc
     {
-        Stack<char> operators;
-        Stack<double> value;
+        public Stack<char> operators;
+        public Stack<double> value;
      
         public Calc()
         {
@@ -17,5 +17,15 @@ namespace WindowsFormsApp1
             value = new Stack<double>();
 
         }
+
+
+
+        private void Chec_Var()
+        {
+
+        }
+
+
+      
     }
 }

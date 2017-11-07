@@ -14,7 +14,9 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
 
-        Calc calc=new Calc();
+        Calc calc = new Calc();
+        string string_member;
+        string lable;
         public Form1()
         {
             InitializeComponent();
@@ -178,9 +180,20 @@ namespace WindowsFormsApp1
 
         private void Plus_Click(object sender, EventArgs e)
         {
-            string_member += lable + "+";
-            label2.Text = string_member;
-           
+            if (lable == "" && calc.value.Count != 0)
+            {
+
+            }
+            else
+            {
+                string_member += lable + "+";
+                calc.value.Push(Double.Parse(lable));
+                lable = "";
+
+
+
+                label2.Text = string_member;
+            }
         }
 
         private void Zap_Click(object sender, EventArgs e)
