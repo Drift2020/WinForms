@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
 
         private void CleanAll_Click(object sender, EventArgs e)
         {
-            calc.value2 = 0;
+            calc.value2 = null;
             calc.value1 = 0;
 
             strings = "";
@@ -85,22 +85,61 @@ namespace WindowsFormsApp1
 
         private void Plus_Click(object sender, EventArgs e)
         {
-            if(lable!= "" && calc.value1 == null)
+
+            if(lable!="")
             {
-                calc.value1 = Double.Parse(lable);
-                strings += lable + " + ";
-                label2.Text = strings;
-                lable = "";
-            }
-            else if(lable != "" && calc.value1 != null)
+                if(calc.value1==null)
+                {
+                    calc.value1 = Double.Parse(lable);
+                    label2.Text = lable + " + ";
+                    calc.operators = "+";
+                    lable = "";
+                }
+                else if(calc.value2==null)
+                {
+                   
+                   
+                    calc.value2 = Double.Parse(lable);
+
+                    calc.value1 = calc.Operetion() != null ? calc.Operetion() : calc.value1;
+
+                    calc.operators = "+";
+
+                    label2.Text += lable + " + ";
+                    label1.Text = calc.value1.ToString();
+                    calc.value2 = null;
+                    lable = "";
+                }
+            }   
+        }
+
+
+        private void Min_Click(object sender, EventArgs e)
+        {
+            if (lable != "")
             {
-                calc.value2 = Double.Parse(lable);
-                strings += lable + " + ";
-                  lable = "";
-                label2.Text = strings;
-                label1.Text = calc.Plus().ToString();
-                calc.value1 = calc.Plus();
+                if (calc.value1 == null)
+                {
+                    calc.value1 = Double.Parse(lable);
+                    label2.Text = lable + " - ";
+                    calc.operators = "-";
+                    lable = "";
+                }
+                else if (calc.value2 == null)
+                {
+                   
+                    calc.value2 = Double.Parse(lable);
+                    calc.value1 = calc.Operetion() != null ? calc.Operetion() : calc.value1;
+
+                    calc.operators = "-";
+
+                    label2.Text += lable + " - ";
+                    label1.Text = calc.value1.ToString();
+                    calc.value2 = null;
+                    lable = "";
+                }
             }
+
         }
 
         private void PlusForMin_Click(object sender, EventArgs e)
@@ -125,8 +164,13 @@ namespace WindowsFormsApp1
         private void B1_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
-            lable += label1.Text = "" + b.Text;
+            lable +=  "" + b.Text;
             label1.Text = lable;
+        }
+
+        private void Value_Click(object sender, EventArgs e)
+        {
+          
         }
 
         private void Ymnoj_Click(object sender, EventArgs e)
@@ -139,14 +183,23 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Min_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void RESULT_Click(object sender, EventArgs e)
         {
+            if (calc.value2 == null)
+            {
 
+                calc.value2 = Double.Parse(lable);
+                calc.value1 = calc.Operetion() != null ? calc.Operetion() : calc.value1;
+
+                calc.operators = "-";
+
+                label2.Text ="";
+                label1.Text = calc.value1.ToString();
+                calc.value2 = null;
+                lable = "";
+            }
         }
 
     

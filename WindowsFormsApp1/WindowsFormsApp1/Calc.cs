@@ -21,12 +21,32 @@ namespace WindowsFormsApp1
             value2 = null;
         }
 
-        public double? Plus()
+        public double? Addition()
         {
             return (value1 + value2);
         }
+        public double? Subtraction()
+        {
+            return (value1 - value2);
+        }
 
-
-      
+        public double? Operetion()
+        {
+            if(operators == "+" )
+            {
+                if (value1 != null&&value2 != null)
+                {
+                    return Addition();
+                }
+            }
+            else if(operators =="-")
+            {
+                if (value1 != null && value2 != null)
+                {
+                    return Subtraction();
+                }
+            }
+            return null;
+        }
     }
 }
