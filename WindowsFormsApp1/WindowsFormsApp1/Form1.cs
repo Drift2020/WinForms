@@ -17,16 +17,16 @@ namespace WindowsFormsApp1
         Calc calc = new Calc();
         string string_member;
         string lable;
+     
         public Form1()
         {
             InitializeComponent();
 
-
             label1.Text = "0";
-        
-         
+                
             lable = "";
             label2.Text = string_member = "";
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -96,67 +96,19 @@ namespace WindowsFormsApp1
         {
 
         }
-        private void B7_Click(object sender, EventArgs e)
-        {
-            lable += "7";
-            label1.Text = lable;
-        }
 
-        private void B8_Click(object sender, EventArgs e)
-        {
-            lable += "8";
-            label1.Text = lable;
-        }
 
-        private void B9_Click(object sender, EventArgs e)
-        {
-            lable += "9";
-            label1.Text = lable;
-        }
 
-        
-
-        private void B4_Click(object sender, EventArgs e)
-        {
-            lable += "4";
-            label1.Text = lable;
-        }
-
-        private void B5_Click(object sender, EventArgs e)
-        {
-            lable += "5";
-            label1.Text = lable;
-        }
-
-        private void B6_Click(object sender, EventArgs e)
-        {
-            lable += "6";
-            label1.Text = lable;
-        }
+  
 
         private void B1_Click(object sender, EventArgs e)
         {
-            lable += "1";
+            Button b = (Button)sender;
+            lable += label1.Text = "" + b.Text;
             label1.Text = lable;
         }
 
-        private void B2_Click(object sender, EventArgs e)
-        {
-            lable += "2";
-            label1.Text = lable;
-        }
-
-        private void B3_Click(object sender, EventArgs e)
-        {
-            lable += "3";
-            label1.Text = lable;
-        }
-
-        private void B0_Click(object sender, EventArgs e)
-        {
-            lable += "0";
-            label1.Text = lable;
-        }
+     
 
         private void Ymnoj_Click(object sender, EventArgs e)
         {
@@ -180,20 +132,7 @@ namespace WindowsFormsApp1
 
         private void Plus_Click(object sender, EventArgs e)
         {
-            if (lable == "" && calc.value.Count != 0)
-            {
-
-            }
-            else
-            {
-                string_member += lable + "+";
-                calc.value.Push(Double.Parse(lable));
-                lable = "";
-
-
-
-                label2.Text = string_member;
-            }
+           
         }
 
         private void Zap_Click(object sender, EventArgs e)
