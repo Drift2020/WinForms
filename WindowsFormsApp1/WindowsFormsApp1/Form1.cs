@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
 
         Calc calc = new Calc();
-        string string_member;
+        string strings;
         string lable;
      
         public Form1()
@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             label1.Text = "0";
                 
             lable = "";
-            label2.Text = string_member = "";
+            label2.Text = strings = "";
 
         }
 
@@ -68,14 +68,39 @@ namespace WindowsFormsApp1
         {
             lable = "";
             label1.Text = "0";
+            
         }
 
         private void CleanAll_Click(object sender, EventArgs e)
         {
-            string_member = "";
+            calc.value2 = 0;
+            calc.value1 = 0;
+
+            strings = "";
             lable = "";
+
             label1.Text = "0";
             label2.Text="";
+        }
+
+        private void Plus_Click(object sender, EventArgs e)
+        {
+            if(lable!= "" && calc.value1 == null)
+            {
+                calc.value1 = Double.Parse(lable);
+                strings += lable + " + ";
+                label2.Text = strings;
+                lable = "";
+            }
+            else if(lable != "" && calc.value1 != null)
+            {
+                calc.value2 = Double.Parse(lable);
+                strings += lable + " + ";
+                  lable = "";
+                label2.Text = strings;
+                label1.Text = calc.Plus().ToString();
+                calc.value1 = calc.Plus();
+            }
         }
 
         private void PlusForMin_Click(object sender, EventArgs e)
@@ -97,18 +122,12 @@ namespace WindowsFormsApp1
 
         }
 
-
-
-  
-
         private void B1_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
             lable += label1.Text = "" + b.Text;
             label1.Text = lable;
         }
-
-     
 
         private void Ymnoj_Click(object sender, EventArgs e)
         {
@@ -130,10 +149,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Plus_Click(object sender, EventArgs e)
-        {
-           
-        }
+    
 
         private void Zap_Click(object sender, EventArgs e)
         {

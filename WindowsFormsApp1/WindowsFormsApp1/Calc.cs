@@ -9,21 +9,21 @@ namespace WindowsFormsApp1
     class Calc
     {
         public string operators;
-        public double value1;
-        public double value2;
+        public double? value1;
+        public double? value2;
         public List<double> member;
 
         public Calc()
         {
             member = new List<double>();
             operators = null;
-            value1 = new double();
-            value2 = new double();
+            value1 = null;
+            value2 = null;
         }
 
-        private void Chec_Var()
+        public double? Plus()
         {
-
+            return (value1 + value2);
         }
 
 
