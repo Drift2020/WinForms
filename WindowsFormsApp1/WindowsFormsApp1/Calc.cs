@@ -11,6 +11,7 @@ namespace WindowsFormsApp1
         public string operators;
         public double? value1;
         public double? value2;
+        public double? member_value2;
         public double? member;
 
         public Calc()
@@ -19,6 +20,7 @@ namespace WindowsFormsApp1
             operators = null;
             value1 = null;
             value2 = null;
+            member_value2 = null;
         }
 
         private double? Addition()
