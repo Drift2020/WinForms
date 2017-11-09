@@ -193,14 +193,13 @@ namespace WindowsFormsApp1
         {
             if (lable != "")
             {
-                if (lable != "")
-                {
+                
                     label2.Text = ("√(" + lable + ")");
                     calc.value1 = Math.Sqrt(Double.Parse(lable));
                     
-                    label1.Text= ("√("+calc.value1+")");
+                    label1.Text= calc.value1.ToString();
                    strings = label1.Text;
-                }
+                
             }
         }
         private void Dell_Click(object sender, EventArgs e)
@@ -244,11 +243,13 @@ namespace WindowsFormsApp1
         private void Proz_Click(object sender, EventArgs e)
         {
             
-            if (calc.value1 == null)
+            if (calc.value1 == null||calc.operators==null)
             {
                 label1.Text = "0";
                 label2.Text = "0";
                 calc.value2 = null;
+                calc.value1 = null;
+                lable = "";
             }
             else if (calc.value2 == null)
             {
