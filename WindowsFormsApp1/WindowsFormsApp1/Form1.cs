@@ -182,10 +182,20 @@ namespace WindowsFormsApp1
 
         private void Min_Click(object sender, EventArgs e)
         {
-           
-            if (lable != "" )
+
+            if (lable != "")
             {
-                if (calc.value1 == null)
+
+                if (Double.Parse(lable) != calc.value1 && calc.value2 == null && lable == "0")
+                {
+                    if (lable == "0")
+                        lable = label1.Text;
+
+                    label2.Text = lable + " - ";
+                    calc.operators = "-";
+                    lable = "";
+                }
+                else if (calc.value1 == null)
                 {
                     if (lable == "0")
                         lable = label1.Text;
@@ -197,19 +207,16 @@ namespace WindowsFormsApp1
                 }
                 else if (calc.value2 == null)
                 {
-                   
                     calc.value2 = Double.Parse(lable);
+
                     calc.value1 = calc.Operetion() != null ? calc.Operetion() : calc.value1;
 
                     calc.operators = "-";
-
-                   
 
                     if (strings == "")
                         label2.Text += lable + " - ";
                     else
                         label2.Text += " - ";
-
 
                     label1.Text = calc.value1.ToString();
                     calc.value2 = null;
@@ -321,10 +328,20 @@ namespace WindowsFormsApp1
         }
         private void Dell_Click(object sender, EventArgs e)
         {
-            
+
             if (lable != "")
             {
-                if (calc.value1 == null)
+
+                if (Double.Parse(lable) != calc.value1 && calc.value2 == null && lable == "0")
+                {
+                    if (lable == "0")
+                        lable = label1.Text;
+
+                    label2.Text = lable + " / ";
+                    calc.operators = "/";
+                    lable = "";
+                }
+                else if (calc.value1 == null)
                 {
                     if (lable == "0")
                         lable = label1.Text;
@@ -336,13 +353,11 @@ namespace WindowsFormsApp1
                 }
                 else if (calc.value2 == null)
                 {
-
                     calc.value2 = Double.Parse(lable);
+
                     calc.value1 = calc.Operetion() != null ? calc.Operetion() : calc.value1;
 
                     calc.operators = "/";
-
-                    label2.Text += lable + " / ";
 
                     if (strings == "")
                         label2.Text += lable + " / ";
@@ -473,10 +488,20 @@ namespace WindowsFormsApp1
 
         private void Ymnoj_Click(object sender, EventArgs e)
         {
-            
+
             if (lable != "")
             {
-                if (calc.value1 == null)
+
+                if (Double.Parse(lable) != calc.value1 && calc.value2 == null && lable == "0")
+                {
+                    if (lable == "0")
+                        lable = label1.Text;
+
+                    label2.Text = lable + " * ";
+                    calc.operators = "*";
+                    lable = "";
+                }
+                else if (calc.value1 == null)
                 {
                     if (lable == "0")
                         lable = label1.Text;
@@ -488,12 +513,12 @@ namespace WindowsFormsApp1
                 }
                 else if (calc.value2 == null)
                 {
-
                     calc.value2 = Double.Parse(lable);
+
                     calc.value1 = calc.Operetion() != null ? calc.Operetion() : calc.value1;
 
                     calc.operators = "*";
-                  
+
                     if (strings == "")
                         label2.Text += lable + " * ";
                     else
@@ -509,7 +534,52 @@ namespace WindowsFormsApp1
 
         private void OneDellX_Click(object sender, EventArgs e)
         {
+            if (lable != "")
+            {
+                if (sqrt == "" && label1.Text != "0" && lable == "0")
+                {
+                    sqrt = lable = label1.Text;
+                }
+                else if (sqrt == "")
+                {
+                    sqrt = lable;
+                }
+                else
+                    label2.Text = label2.Text.Replace(sqrt, "");
 
+
+                label2.Text += sqrt = ("reciproc(" + sqrt + ")");
+                calc.value2 = 1/(Double.Parse(lable));
+                lable = calc.value2.ToString();
+                label1.Text = calc.value2.ToString();
+                strings = label1.Text;
+
+                calc.value2 = null;
+            }
+            else if (lable == "")
+            {
+                lable = label1.Text;
+
+                if (sqrt == "" && label1.Text != "0" && lable == "0")
+                {
+                    sqrt = lable = label1.Text;
+                }
+                else if (sqrt == "")
+                {
+                    sqrt = lable;
+                }
+                else
+                    label2.Text = label2.Text.Replace(sqrt, "");
+
+
+                label2.Text += sqrt = ("reciproc(" + sqrt + ")");
+                calc.value2 = 1 / (Double.Parse(lable));
+                lable = calc.value2.ToString();
+                label1.Text = calc.value2.ToString();
+                strings = label1.Text;
+
+                calc.value2 = null;
+            }
         }
 
     
