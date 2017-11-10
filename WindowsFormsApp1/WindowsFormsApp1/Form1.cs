@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
         }
         public void Texts(string s)
         {
-            if (lable == temp_strings && strings != "")
+            if (lable == temp_strings && strings != "" && label2.Text=="")
             {
                 lable = "" + s;
                 label2.Text = strings;
@@ -133,10 +133,21 @@ namespace WindowsFormsApp1
 
         private void Plus_Click(object sender, EventArgs e)
         {
+         
             
-            if (lable!="")
+             if (lable!="")
             {
-                if(calc.value1==null)
+
+                if (Double.Parse(lable) != calc.value1&&calc.value2 == null && lable =="0")
+                {
+                    if (lable == "0")
+                        lable = label1.Text;
+                   
+                    label2.Text = lable + " + ";
+                    calc.operators = "+";
+                    lable = "";
+                }
+                else if (calc.value1==null)
                 {
                     if (lable == "0")
                         lable = label1.Text;
@@ -164,7 +175,8 @@ namespace WindowsFormsApp1
                     lable = "0";
                     strings = "";
                 }
-            }   
+            }
+            
         }
 
 
@@ -210,7 +222,52 @@ namespace WindowsFormsApp1
 
         private void PlusForMin_Click(object sender, EventArgs e)
         {
+            if (lable != "")
+            {
+                if (sqrt == "" && label1.Text != "0" && lable == "0")
+                {
+                    sqrt = lable = label1.Text;
+                }
+                else if (sqrt == "")
+                {
+                    sqrt = lable;
+                }
+                else
+                    label2.Text = label2.Text.Replace(sqrt, "");
 
+
+                label2.Text += sqrt = ("negate(" + sqrt + ")");
+                calc.value2 = Double.Parse(lable) * (-1);
+                lable = calc.value2.ToString();
+                label1.Text = calc.value2.ToString();
+                strings = label1.Text;
+
+                calc.value2 = null;
+            }
+            else if (lable == "")
+            {
+                lable = label1.Text;
+
+                if (sqrt == "" && label1.Text != "0" && lable == "0")
+                {
+                    sqrt = lable = label1.Text;
+                }
+                else if (sqrt == "")
+                {
+                    sqrt = lable;
+                }
+                else
+                    label2.Text = label2.Text.Replace(sqrt, "");
+
+
+                label2.Text += sqrt = ("negate(" + sqrt + ")");
+                calc.value2 = Double.Parse(lable)*(-1);
+                lable = calc.value2.ToString();
+                label1.Text = calc.value2.ToString();
+                strings = label1.Text;
+
+                calc.value2 = null;
+            }
         }
 
         private void Sqrt_Click(object sender, EventArgs e)
@@ -234,6 +291,30 @@ namespace WindowsFormsApp1
                     lable = calc.value2.ToString();
                     label1.Text= calc.value2.ToString();
                     strings = label1.Text;
+
+                calc.value2 = null;
+            }
+            else if(lable=="")
+            {
+                lable = label1.Text;
+
+                if (sqrt == "" && label1.Text != "0" && lable == "0")
+                {
+                    sqrt = lable = label1.Text;
+                }
+                else if (sqrt == "")
+                {
+                    sqrt = lable;
+                }
+                else
+                    label2.Text = label2.Text.Replace(sqrt, "");
+
+
+                label2.Text += sqrt = ("√(" + sqrt + ")");
+                calc.value2 = Math.Sqrt(Double.Parse(lable));
+                lable = calc.value2.ToString();
+                label1.Text = calc.value2.ToString();
+                strings = label1.Text;
 
                 calc.value2 = null;
             }
@@ -313,10 +394,9 @@ namespace WindowsFormsApp1
             Button b = (Button)sender;
             b.Focus();
             Texts(b.Text);
-            SetFocus(IntPtr.Zero);
+           
         }
-        [DllImport("user32.dll")]
-        private extern static IntPtr SetFocus(IntPtr hWnd);
+       
 
         private void B3_KeyDown(object sender, KeyEventArgs e)
         {
@@ -436,7 +516,7 @@ namespace WindowsFormsApp1
 
         private void RESULT_Click(object sender, EventArgs e)
         {
-            if(calc.member_value2 !=null)
+            if(calc.member_value2 !=null&&label2.Text=="")
             {
                 calc.value2 = calc.member_value2;
                 calc.value1 = Double.Parse(label1.Text);
@@ -463,7 +543,7 @@ namespace WindowsFormsApp1
                 label2.Text = "";
                 label1.Text = calc.value1.ToString();
                 calc.value2 = null;
-                calc.value1 = null;
+                //calc.value1 = null;
                 lable = "0";
                 strings = "";
                 sqrt = "";
